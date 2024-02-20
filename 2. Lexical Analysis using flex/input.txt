@@ -1,0 +1,27 @@
+void main(){
+	int a = 1.2.3;
+	a = 1E2.3;
+	char c = 'abcd'
+	c = 'a;
+
+	a = 32;
+
+	if(a==32) {
+a = a - 1;
+	printf("a = %d",a);
+		a = a + 1;
+	}
+
+	char a[32];
+	a = "hi;
+	a = "hellow\
+	world\
+		how are you?";
+	return 0;
+
+	// single line comment
+	/*
+	hello
+guys,
+	*/
+}
