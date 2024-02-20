@@ -1,5 +1,5 @@
 # C Compiler (Short version)
-This repositoy contains implementation of assignments from Compiler Sessional course, offered in Department of Computer Science and Engineering at Bangladesh University of Engineering and Technology (BUET)
+This repositoy contains implementation of assignments from Compiler Sessional course (CSE 310), offered in Department of CSE at BUET.
 
 - ## **`Offline 1` : Symbol Table**
   
