@@ -1,10 +1,14 @@
-Line# 2: Warning, 1 of tabs needed but got 0 tabs.
-Line# 5: Warning, 1 of tabs needed but got 0 tabs.
-Line# 6: Warning, 1 of tabs needed but got 0 tabs.
-Line# 6: 'foo' is a function
-Line# 7: Warning, 1 of tabs needed but got 0 tabs.
-Line# 7: Undefined function 'i'
-Line# 8: Warning, 1 of tabs needed but got 0 tabs.
-Line# 8: Warning: division by zero
-Line# 9: Warning, 1 of tabs needed but got 0 tabs.
-Line# 9: Undeclared function 'bar'
+Line# 3: Syntax error at parameter list of function definition
+Line# 3: Syntax error at parameter list of function definition
+Line# 3: Parameter name missing
+Line# 9: Syntax error at declaration list of variable declaration
+Line# 9: Syntax error at declaration list of variable declaration
+Line# 9: Syntax error at declaration list of variable declaration
+Line# 10: 'a' is an array
+Line# 10: Syntax error at expression of expression statement
+Line# 10: Syntax error at expression of expression statement
+Line# 10: Syntax error at expression of expression statement
+Line# 12: Syntax error at expression of expression statement
+Line# 12: Syntax error at expression of expression statement
+Line# 12: Syntax error at expression of expression statement
+Line# 18: Too many arguments to function 'var'

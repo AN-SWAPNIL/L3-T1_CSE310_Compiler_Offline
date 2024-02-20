@@ -1,246 +1,217 @@
 Line# 1: Token <INT> Lexeme int found
 type_specifier : INT
-Line# 1: Token <ID> Lexeme main found
-Line# 1: Token <LPAREN> Lexeme ( found
-Line# 1: Token <RPAREN> Lexeme ) found
-Line# 1: Token <LCURL> Lexeme { found
+Line# 1: Token <ID> Lexeme a found
+Line# 1: Token <COMMA> Lexeme , found
+declaration_list : ID
+Line# 1: Token <ID> Lexeme arr found
+Line# 1: Token <LSQUARE> Lexeme [ found
+Line# 1: Token <CONST_INT> Lexeme 5 found
+Line# 1: Token <RSQUARE> Lexeme ] found
+Line# 1: Token <SEMICOLON> Lexeme ; found
+declaration_list : declaration_list COMMA ID LSQUARE CONST_INT RSQUARE
+var_declaration : type_specifier declaration_list SEMICOLON
+unit : var_declaration
+program : unit
 Line# 2: Token <INT> Lexeme int found
 type_specifier : INT
-Line# 2: Token <ID> Lexeme i found
-Line# 2: Token <SEMICOLON> Lexeme ; found
-declaration_list : ID
-var_declaration : type_specifier declaration_list SEMICOLON
-statement : var_declaration
-statements : statement
-Line# 3: Token <IF> Lexeme if found
-Line# 3: Token <LPAREN> Lexeme ( found
-Line# 3: Token <ID> Lexeme i found
-Line# 3: Token <RELOP> Lexeme > found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 3: Token <CONST_INT> Lexeme 0 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 3: Token <LOGICOP> Lexeme || found
-simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-Line# 3: Token <ID> Lexeme i found
-Line# 3: Token <RELOP> Lexeme < found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 3: Token <CONST_INT> Lexeme 10 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 3: Token <RPAREN> Lexeme ) found
-simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-logic_expression : rel_expression LOGICOP rel_expression
-expression : logic_expression
+Line# 2: Token <ID> Lexeme f found
+Line# 2: Token <LPAREN> Lexeme ( found
+Line# 2: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 2: Token <ID> Lexeme a found
+parameter_list : type_specifier ID
+Line# 2: Token <COMMA> Lexeme , found
+Line# 2: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 2: Token <ID> Lexeme b found
+parameter_list : parameter_list COMMA type_specifier ID
+Line# 2: Token <COMMA> Lexeme , found
+Line# 2: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 2: Token <ID> Lexeme c found
+parameter_list : parameter_list COMMA type_specifier ID
+Line# 2: Token <RPAREN> Lexeme ) found
+Line# 3: Token <LCURL> Lexeme { found
 Warning at line no 4 : indentation error
-Line# 4: Token <ID> Lexeme i found
-Line# 4: Token <ASSIGNOP> Lexeme = found
-variable : ID
-Line# 4: Token <CONST_INT> Lexeme 100 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
+Line# 4: Token <PRINTLN> Lexeme println found
+Line# 4: Token <LPAREN> Lexeme ( found
+Line# 4: Token <ID> Lexeme a found
+Line# 4: Token <RPAREN> Lexeme ) found
 Line# 4: Token <SEMICOLON> Lexeme ; found
-simple_expression : term
-rel_expression : simple_expression
-logic_expression : rel_expression
-expression : variable ASSIGNOP logic_expression
-expression_statement : expression SEMICOLON
-statement : expression_statement
-Line# 5: Token <ELSE> Lexeme else found
-Warning at line no 6 : indentation error
-Line# 6: Token <ID> Lexeme i found
-Line# 6: Token <ASSIGNOP> Lexeme = found
-variable : ID
-Line# 6: Token <CONST_INT> Lexeme 200 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 6: Token <SEMICOLON> Lexeme ; found
-simple_expression : term
-rel_expression : simple_expression
-logic_expression : rel_expression
-expression : variable ASSIGNOP logic_expression
-expression_statement : expression SEMICOLON
-statement : expression_statement
-statement : IF LPAREN expression RPAREN statement ELSE statement
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statement
+Warning at line no 5 : indentation error
+Line# 5: Token <PRINTLN> Lexeme println found
+Line# 5: Token <LPAREN> Lexeme ( found
+Line# 5: Token <ID> Lexeme b found
+Line# 5: Token <RPAREN> Lexeme ) found
+Line# 5: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
 statements : statements statement
-Line# 8: Token <IF> Lexeme if found
-Line# 8: Token <LPAREN> Lexeme ( found
-Line# 8: Token <ID> Lexeme i found
-Line# 8: Token <RELOP> Lexeme > found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 8: Token <CONST_INT> Lexeme 20 found
+Warning at line no 6 : indentation error
+Line# 6: Token <PRINTLN> Lexeme println found
+Line# 6: Token <LPAREN> Lexeme ( found
+Line# 6: Token <ID> Lexeme c found
+Line# 6: Token <RPAREN> Lexeme ) found
+Line# 6: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 7 : indentation error
+Line# 7: Token <ID> Lexeme arr found
+Line# 7: Token <LSQUARE> Lexeme [ found
+Line# 7: Token <CONST_INT> Lexeme 1 found
 factor : CONST_INT
 unary_expression : factor
 term : unary_expression
-Line# 8: Token <LOGICOP> Lexeme && found
+Line# 7: Token <RSQUARE> Lexeme ] found
 simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-Line# 8: Token <ID> Lexeme i found
-Line# 8: Token <RELOP> Lexeme < found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 8: Token <CONST_INT> Lexeme 30 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 8: Token <RPAREN> Lexeme ) found
-simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-logic_expression : rel_expression LOGICOP rel_expression
+rel_expression : simple_expression
+logic_expression : rel_expression
 expression : logic_expression
+variable : ID LSQUARE expression RSQUARE
+Line# 7: Token <ASSIGNOP> Lexeme = found
+Line# 7: Token <CONST_INT> Lexeme 441 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 7: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 8 : indentation error
+Line# 8: Token <ID> Lexeme arr found
+Line# 8: Token <LSQUARE> Lexeme [ found
+Line# 8: Token <CONST_INT> Lexeme 0 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 8: Token <RSQUARE> Lexeme ] found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+variable : ID LSQUARE expression RSQUARE
+Line# 8: Token <ASSIGNOP> Lexeme = found
+Line# 8: Token <CONST_INT> Lexeme 555 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 8: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
 Warning at line no 9 : indentation error
-Line# 9: Token <ID> Lexeme i found
+Line# 9: Token <ID> Lexeme b found
 Line# 9: Token <ASSIGNOP> Lexeme = found
 variable : ID
-Line# 9: Token <CONST_INT> Lexeme 300 found
+Line# 9: Token <ID> Lexeme arr found
+Line# 9: Token <LSQUARE> Lexeme [ found
+Line# 9: Token <CONST_INT> Lexeme 1 found
 factor : CONST_INT
 unary_expression : factor
 term : unary_expression
+Line# 9: Token <RSQUARE> Lexeme ] found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+variable : ID LSQUARE expression RSQUARE
 Line# 9: Token <SEMICOLON> Lexeme ; found
-simple_expression : term
-rel_expression : simple_expression
-logic_expression : rel_expression
-expression : variable ASSIGNOP logic_expression
-expression_statement : expression SEMICOLON
-statement : expression_statement
-Line# 10: Token <ELSE> Lexeme else found
-Warning at line no 11 : indentation error
-Line# 11: Token <ID> Lexeme i found
-Line# 11: Token <ASSIGNOP> Lexeme = found
-variable : ID
-Line# 11: Token <CONST_INT> Lexeme 400 found
-factor : CONST_INT
+factor : variable
 unary_expression : factor
 term : unary_expression
-Line# 11: Token <SEMICOLON> Lexeme ; found
 simple_expression : term
 rel_expression : simple_expression
 logic_expression : rel_expression
 expression : variable ASSIGNOP logic_expression
 expression_statement : expression SEMICOLON
 statement : expression_statement
-statement : IF LPAREN expression RPAREN statement ELSE statement
 statements : statements statement
-Line# 13: Token <IF> Lexeme if found
-Line# 13: Token <LPAREN> Lexeme ( found
-Line# 13: Token <LPAREN> Lexeme ( found
-Line# 13: Token <ID> Lexeme i found
-Line# 13: Token <RELOP> Lexeme > found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 13: Token <CONST_INT> Lexeme 40 found
+Warning at line no 10 : indentation error
+Line# 10: Token <PRINTLN> Lexeme println found
+Line# 10: Token <LPAREN> Lexeme ( found
+Line# 10: Token <ID> Lexeme b found
+Line# 10: Token <RPAREN> Lexeme ) found
+Line# 10: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 11 : indentation error
+Line# 11: Token <RETURN> Lexeme return found
+Line# 11: Token <ID> Lexeme arr found
+Line# 11: Token <LSQUARE> Lexeme [ found
+Line# 11: Token <CONST_INT> Lexeme 0 found
 factor : CONST_INT
 unary_expression : factor
 term : unary_expression
-Line# 13: Token <LOGICOP> Lexeme && found
-simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-Line# 13: Token <ID> Lexeme i found
-Line# 13: Token <RELOP> Lexeme < found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 13: Token <CONST_INT> Lexeme 50 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 13: Token <RPAREN> Lexeme ) found
-simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-logic_expression : rel_expression LOGICOP rel_expression
-expression : logic_expression
-factor : LPAREN expression RPAREN
-unary_expression : factor
-term : unary_expression
-Line# 13: Token <LOGICOP> Lexeme || found
-simple_expression : term
-rel_expression : simple_expression
-Line# 13: Token <LPAREN> Lexeme ( found
-Line# 13: Token <ID> Lexeme i found
-Line# 13: Token <RELOP> Lexeme < found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 13: Token <CONST_INT> Lexeme 60 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 13: Token <LOGICOP> Lexeme && found
-simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-Line# 13: Token <ID> Lexeme i found
-Line# 13: Token <RELOP> Lexeme > found
-variable : ID
-factor : variable
-unary_expression : factor
-term : unary_expression
-simple_expression : term
-Line# 13: Token <CONST_INT> Lexeme 70 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 13: Token <RPAREN> Lexeme ) found
-simple_expression : term
-rel_expression : simple_expression RELOP simple_expression
-logic_expression : rel_expression LOGICOP rel_expression
-expression : logic_expression
-factor : LPAREN expression RPAREN
-unary_expression : factor
-term : unary_expression
-Line# 13: Token <RPAREN> Lexeme ) found
-simple_expression : term
-rel_expression : simple_expression
-logic_expression : rel_expression LOGICOP rel_expression
-expression : logic_expression
-Warning at line no 14 : indentation error
-Line# 14: Token <ID> Lexeme i found
-Line# 14: Token <ASSIGNOP> Lexeme = found
-variable : ID
-Line# 14: Token <CONST_INT> Lexeme 500 found
-factor : CONST_INT
-unary_expression : factor
-term : unary_expression
-Line# 14: Token <SEMICOLON> Lexeme ; found
+Line# 11: Token <RSQUARE> Lexeme ] found
 simple_expression : term
 rel_expression : simple_expression
 logic_expression : rel_expression
-expression : variable ASSIGNOP logic_expression
-expression_statement : expression SEMICOLON
-statement : expression_statement
-Line# 15: Token <ELSE> Lexeme else found
-Warning at line no 16 : indentation error
-Line# 16: Token <ID> Lexeme i found
-Line# 16: Token <ASSIGNOP> Lexeme = found
+expression : logic_expression
+variable : ID LSQUARE expression RSQUARE
+Line# 11: Token <SEMICOLON> Lexeme ; found
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+statement : RETURN expression SEMICOLON
+statements : statements statement
+Line# 12: Token <RCURL> Lexeme } found
+compound_statement : LCURL statements RCURL
+	ScopeTable# 2
+	1--> <c,INT> 
+	10--> <a,INT> 
+	11--> <b,INT> 
+	ScopeTable# 1
+	1--> <arr,ARRAY,INT> 
+	4--> <f,FUNCTION,INT> 
+	10--> <a,INT> 
+func_definition : type_specifier ID LPAREN parameter_list RPAREN compound_statement
+unit : func_definition
+program : program unit
+Line# 13: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 13: Token <ID> Lexeme recursive found
+Line# 13: Token <LPAREN> Lexeme ( found
+Line# 13: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 13: Token <ID> Lexeme n found
+parameter_list : type_specifier ID
+Line# 13: Token <RPAREN> Lexeme ) found
+Line# 14: Token <LCURL> Lexeme { found
+Warning at line no 15 : indentation error
+Line# 15: Token <IF> Lexeme if found
+Line# 15: Token <LPAREN> Lexeme ( found
+Line# 15: Token <ID> Lexeme n found
+Line# 15: Token <RELOP> Lexeme == found
 variable : ID
-Line# 16: Token <CONST_INT> Lexeme 600 found
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 15: Token <CONST_INT> Lexeme 1 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 15: Token <RPAREN> Lexeme ) found
+simple_expression : term
+rel_expression : simple_expression RELOP simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+Warning at line no 16 : indentation error
+Line# 16: Token <RETURN> Lexeme return found
+Line# 16: Token <CONST_INT> Lexeme 1 found
 factor : CONST_INT
 unary_expression : factor
 term : unary_expression
@@ -248,25 +219,93 @@ Line# 16: Token <SEMICOLON> Lexeme ; found
 simple_expression : term
 rel_expression : simple_expression
 logic_expression : rel_expression
-expression : variable ASSIGNOP logic_expression
-expression_statement : expression SEMICOLON
-statement : expression_statement
-statement : IF LPAREN expression RPAREN statement ELSE statement
-statements : statements statement
-Line# 17: Token <PRINTLN> Lexeme println found
+expression : logic_expression
+statement : RETURN expression SEMICOLON
+Warning at line no 17 : indentation error
+Line# 17: Token <IF> Lexeme if found
+statement : IF LPAREN expression RPAREN statement
+statements : statement
 Line# 17: Token <LPAREN> Lexeme ( found
-Line# 17: Token <ID> Lexeme i found
-Line# 17: Token <RPAREN> Lexeme ) found
-Line# 17: Token <SEMICOLON> Lexeme ; found
-statement : PRINTLN LPAREN ID RPAREN SEMICOLON
-statements : statements statement
-Line# 19: Token <RETURN> Lexeme return found
-Line# 19: Token <CONST_INT> Lexeme 0 found
+Line# 17: Token <ID> Lexeme n found
+Line# 17: Token <RELOP> Lexeme == found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 17: Token <CONST_INT> Lexeme 0 found
 factor : CONST_INT
 unary_expression : factor
 term : unary_expression
-Line# 19: Token <SEMICOLON> Lexeme ; found
+Line# 17: Token <RPAREN> Lexeme ) found
 simple_expression : term
+rel_expression : simple_expression RELOP simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+Warning at line no 18 : indentation error
+Line# 18: Token <RETURN> Lexeme return found
+Line# 18: Token <CONST_INT> Lexeme 0 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 18: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+statement : RETURN expression SEMICOLON
+Warning at line no 19 : indentation error
+Line# 19: Token <RETURN> Lexeme return found
+statement : IF LPAREN expression RPAREN statement
+statements : statements statement
+Line# 19: Token <ID> Lexeme recursive found
+Line# 19: Token <LPAREN> Lexeme ( found
+Line# 19: Token <ID> Lexeme n found
+Line# 19: Token <ADDOP> Lexeme - found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 19: Token <CONST_INT> Lexeme 1 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 19: Token <RPAREN> Lexeme ) found
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+arguments : logic_expression
+argument_list : arguments
+factor : ID LPAREN argument_list RPAREN
+unary_expression : factor
+term : unary_expression
+Line# 19: Token <ADDOP> Lexeme + found
+simple_expression : term
+Line# 19: Token <ID> Lexeme recursive found
+Line# 19: Token <LPAREN> Lexeme ( found
+Line# 19: Token <ID> Lexeme n found
+Line# 19: Token <ADDOP> Lexeme - found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 19: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 19: Token <RPAREN> Lexeme ) found
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+arguments : logic_expression
+argument_list : arguments
+factor : ID LPAREN argument_list RPAREN
+unary_expression : factor
+term : unary_expression
+Line# 19: Token <SEMICOLON> Lexeme ; found
+simple_expression : simple_expression ADDOP term
 rel_expression : simple_expression
 logic_expression : rel_expression
 expression : logic_expression
@@ -274,13 +313,1231 @@ statement : RETURN expression SEMICOLON
 statements : statements statement
 Line# 20: Token <RCURL> Lexeme } found
 compound_statement : LCURL statements RCURL
-	ScopeTable# 2
-	7--> <i,INT> 
+	ScopeTable# 3
+	1--> <n,INT> 
 	ScopeTable# 1
-	2--> <main,FUNCTION,INT> 
+	1--> <arr,ARRAY,INT> <recursive,FUNCTION,INT> 
+	4--> <f,FUNCTION,INT> 
+	10--> <a,INT> 
+func_definition : type_specifier ID LPAREN parameter_list RPAREN compound_statement
+unit : func_definition
+program : program unit
+Line# 21: Token <VOID> Lexeme void found
+type_specifier : VOID
+Line# 21: Token <ID> Lexeme v found
+Line# 21: Token <LPAREN> Lexeme ( found
+Line# 21: Token <RPAREN> Lexeme ) found
+Line# 22: Token <LCURL> Lexeme { found
+Warning at line no 23 : indentation error
+Line# 23: Token <ID> Lexeme a found
+Line# 23: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 23: Token <CONST_INT> Lexeme 3 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 23: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statement
+Warning at line no 24 : indentation error
+Line# 24: Token <IF> Lexeme if found
+Line# 24: Token <LPAREN> Lexeme ( found
+Line# 24: Token <ID> Lexeme a found
+Line# 24: Token <RPAREN> Lexeme ) found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+Warning at line no 25 : indentation error
+Line# 25: Token <LCURL> Lexeme { found
+Warning at line no 26 : indentation error
+Line# 26: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 26: Token <ID> Lexeme a found
+Line# 26: Token <SEMICOLON> Lexeme ; found
+declaration_list : ID
+var_declaration : type_specifier declaration_list SEMICOLON
+statement : var_declaration
+statements : statement
+Warning at line no 27 : indentation error
+Line# 27: Token <ID> Lexeme a found
+Line# 27: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 27: Token <CONST_INT> Lexeme 1 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 27: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 28 : indentation error
+Line# 28: Token <PRINTLN> Lexeme println found
+Line# 28: Token <LPAREN> Lexeme ( found
+Line# 28: Token <ID> Lexeme a found
+Line# 28: Token <RPAREN> Lexeme ) found
+Line# 28: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 29 : indentation error
+Line# 29: Token <RCURL> Lexeme } found
+compound_statement : LCURL statements RCURL
+	ScopeTable# 5
+	10--> <a,INT> 
+	ScopeTable# 4
+	ScopeTable# 1
+	1--> <arr,ARRAY,INT> <recursive,FUNCTION,INT> 
+	4--> <f,FUNCTION,INT> 
+	9--> <v,FUNCTION,VOID> 
+	10--> <a,INT> 
+statement : compound_statement
+Warning at line no 30 : indentation error
+Line# 30: Token <PRINTLN> Lexeme println found
+statement : IF LPAREN expression RPAREN statement
+statements : statements statement
+Line# 30: Token <LPAREN> Lexeme ( found
+Line# 30: Token <ID> Lexeme a found
+Line# 30: Token <RPAREN> Lexeme ) found
+Line# 30: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Line# 31: Token <RCURL> Lexeme } found
+compound_statement : LCURL statements RCURL
+	ScopeTable# 4
+	ScopeTable# 1
+	1--> <arr,ARRAY,INT> <recursive,FUNCTION,INT> 
+	4--> <f,FUNCTION,INT> 
+	9--> <v,FUNCTION,VOID> 
+	10--> <a,INT> 
 func_definition : type_specifier ID LPAREN RPAREN compound_statement
 unit : func_definition
-program : unit
+program : program unit
+Line# 32: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 32: Token <ID> Lexeme main found
+Line# 32: Token <LPAREN> Lexeme ( found
+Line# 32: Token <RPAREN> Lexeme ) found
+Line# 33: Token <LCURL> Lexeme { found
+Warning at line no 34 : indentation error
+Line# 34: Token <INT> Lexeme int found
+type_specifier : INT
+Line# 34: Token <ID> Lexeme i found
+Line# 34: Token <COMMA> Lexeme , found
+declaration_list : ID
+Line# 34: Token <ID> Lexeme j found
+Line# 34: Token <COMMA> Lexeme , found
+declaration_list : declaration_list COMMA ID
+Line# 34: Token <ID> Lexeme k found
+Line# 34: Token <COMMA> Lexeme , found
+declaration_list : declaration_list COMMA ID
+Line# 34: Token <ID> Lexeme a found
+Line# 34: Token <COMMA> Lexeme , found
+declaration_list : declaration_list COMMA ID
+Line# 34: Token <ID> Lexeme array found
+Line# 34: Token <LSQUARE> Lexeme [ found
+Line# 34: Token <CONST_INT> Lexeme 5 found
+Line# 34: Token <RSQUARE> Lexeme ] found
+Line# 34: Token <SEMICOLON> Lexeme ; found
+declaration_list : declaration_list COMMA ID LSQUARE CONST_INT RSQUARE
+var_declaration : type_specifier declaration_list SEMICOLON
+statement : var_declaration
+statements : statement
+Warning at line no 35 : indentation error
+Line# 35: Token <ID> Lexeme a found
+Line# 35: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 35: Token <CONST_INT> Lexeme 5 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 35: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 36 : indentation error
+Line# 36: Token <ID> Lexeme v found
+Line# 36: Token <LPAREN> Lexeme ( found
+Line# 36: Token <RPAREN> Lexeme ) found
+argument_list : 
+factor : ID LPAREN argument_list RPAREN
+unary_expression : factor
+term : unary_expression
+Line# 36: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 37 : indentation error
+Line# 37: Token <PRINTLN> Lexeme println found
+Line# 37: Token <LPAREN> Lexeme ( found
+Line# 37: Token <ID> Lexeme a found
+Line# 37: Token <RPAREN> Lexeme ) found
+Line# 37: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 38 : indentation error
+Line# 38: Token <FOR> Lexeme for found
+Line# 38: Token <LPAREN> Lexeme ( found
+Line# 38: Token <ID> Lexeme i found
+Line# 38: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 38: Token <CONST_INT> Lexeme 0 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 38: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+Line# 38: Token <ID> Lexeme i found
+Line# 38: Token <RELOP> Lexeme < found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 38: Token <CONST_INT> Lexeme 5 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 38: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression RELOP simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+expression_statement : expression SEMICOLON
+Line# 38: Token <ID> Lexeme i found
+Line# 38: Token <INCOP> Lexeme ++ found
+variable : ID
+factor : variable INCOP
+unary_expression : factor
+term : unary_expression
+Line# 38: Token <RPAREN> Lexeme ) found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+Warning at line no 39 : indentation error
+Line# 39: Token <LCURL> Lexeme { found
+Warning at line no 40 : indentation error
+Line# 40: Token <ID> Lexeme array found
+Line# 40: Token <LSQUARE> Lexeme [ found
+Line# 40: Token <ID> Lexeme i found
+Line# 40: Token <RSQUARE> Lexeme ] found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+variable : ID LSQUARE expression RSQUARE
+Line# 40: Token <ASSIGNOP> Lexeme = found
+Line# 40: Token <ID> Lexeme i found
+Line# 40: Token <ADDOP> Lexeme + found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 40: Token <CONST_INT> Lexeme 1 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 40: Token <SEMICOLON> Lexeme ; found
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statement
+Warning at line no 41 : indentation error
+Line# 41: Token <RCURL> Lexeme } found
+compound_statement : LCURL statements RCURL
+	ScopeTable# 6
+	ScopeTable# 5
+	7--> <i,INT> 
+	8--> <j,INT> 
+	9--> <k,INT> 
+	10--> <a,INT> <array,ARRAY,INT> 
+	ScopeTable# 1
+	1--> <arr,ARRAY,INT> <recursive,FUNCTION,INT> 
+	2--> <main,FUNCTION,INT> 
+	4--> <f,FUNCTION,INT> 
+	9--> <v,FUNCTION,VOID> 
+	10--> <a,INT> 
+statement : compound_statement
+statement : FOR LPAREN expression_statement expression_statement expression RPAREN statement
+statements : statements statement
+Warning at line no 42 : indentation error
+Line# 42: Token <ID> Lexeme i found
+Line# 42: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 42: Token <CONST_INT> Lexeme 4 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 42: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 43 : indentation error
+Line# 43: Token <WHILE> Lexeme while found
+Line# 43: Token <LPAREN> Lexeme ( found
+Line# 43: Token <ID> Lexeme i found
+Line# 43: Token <DECOP> Lexeme -- found
+variable : ID
+factor : variable DECOP
+unary_expression : factor
+term : unary_expression
+Line# 43: Token <RPAREN> Lexeme ) found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+Warning at line no 44 : indentation error
+Line# 44: Token <LCURL> Lexeme { found
+Warning at line no 45 : indentation error
+Line# 45: Token <ID> Lexeme j found
+Line# 45: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 45: Token <ID> Lexeme array found
+Line# 45: Token <LSQUARE> Lexeme [ found
+Line# 45: Token <ID> Lexeme i found
+Line# 45: Token <RSQUARE> Lexeme ] found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+variable : ID LSQUARE expression RSQUARE
+Line# 45: Token <SEMICOLON> Lexeme ; found
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statement
+Warning at line no 46 : indentation error
+Line# 46: Token <PRINTLN> Lexeme println found
+Line# 46: Token <LPAREN> Lexeme ( found
+Line# 46: Token <ID> Lexeme j found
+Line# 46: Token <RPAREN> Lexeme ) found
+Line# 46: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 47 : indentation error
+Line# 47: Token <RCURL> Lexeme } found
+compound_statement : LCURL statements RCURL
+	ScopeTable# 7
+	ScopeTable# 5
+	7--> <i,INT> 
+	8--> <j,INT> 
+	9--> <k,INT> 
+	10--> <a,INT> <array,ARRAY,INT> 
+	ScopeTable# 1
+	1--> <arr,ARRAY,INT> <recursive,FUNCTION,INT> 
+	2--> <main,FUNCTION,INT> 
+	4--> <f,FUNCTION,INT> 
+	9--> <v,FUNCTION,VOID> 
+	10--> <a,INT> 
+statement : compound_statement
+statement : WHILE LPAREN expression RPAREN statement
+statements : statements statement
+Warning at line no 48 : indentation error
+Line# 48: Token <ID> Lexeme k found
+Line# 48: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 48: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 48: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 49 : indentation error
+Line# 49: Token <IF> Lexeme if found
+Line# 49: Token <LPAREN> Lexeme ( found
+Line# 49: Token <ID> Lexeme k found
+Line# 49: Token <RELOP> Lexeme > found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 49: Token <CONST_INT> Lexeme 0 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 49: Token <RPAREN> Lexeme ) found
+simple_expression : term
+rel_expression : simple_expression RELOP simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+Warning at line no 50 : indentation error
+Line# 50: Token <ID> Lexeme k found
+Line# 50: Token <INCOP> Lexeme ++ found
+variable : ID
+factor : variable INCOP
+unary_expression : factor
+term : unary_expression
+Line# 50: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+Warning at line no 51 : indentation error
+Line# 51: Token <ELSE> Lexeme else found
+Warning at line no 52 : indentation error
+Line# 52: Token <ID> Lexeme k found
+Line# 52: Token <DECOP> Lexeme -- found
+variable : ID
+factor : variable DECOP
+unary_expression : factor
+term : unary_expression
+Line# 52: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statement : IF LPAREN expression RPAREN statement ELSE statement
+statements : statements statement
+Warning at line no 53 : indentation error
+Line# 53: Token <PRINTLN> Lexeme println found
+Line# 53: Token <LPAREN> Lexeme ( found
+Line# 53: Token <ID> Lexeme k found
+Line# 53: Token <RPAREN> Lexeme ) found
+Line# 53: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 54 : indentation error
+Line# 54: Token <ID> Lexeme k found
+Line# 54: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 54: Token <ADDOP> Lexeme - found
+Line# 54: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+unary_expression : ADDOP unary_expression
+term : unary_expression
+Line# 54: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 55 : indentation error
+Line# 55: Token <IF> Lexeme if found
+Line# 55: Token <LPAREN> Lexeme ( found
+Line# 55: Token <ID> Lexeme k found
+Line# 55: Token <RELOP> Lexeme < found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 55: Token <CONST_INT> Lexeme 0 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 55: Token <RPAREN> Lexeme ) found
+simple_expression : term
+rel_expression : simple_expression RELOP simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+Warning at line no 56 : indentation error
+Line# 56: Token <ID> Lexeme k found
+Line# 56: Token <INCOP> Lexeme ++ found
+variable : ID
+factor : variable INCOP
+unary_expression : factor
+term : unary_expression
+Line# 56: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+Warning at line no 57 : indentation error
+Line# 57: Token <ELSE> Lexeme else found
+Warning at line no 58 : indentation error
+Line# 58: Token <ID> Lexeme k found
+Line# 58: Token <DECOP> Lexeme -- found
+variable : ID
+factor : variable DECOP
+unary_expression : factor
+term : unary_expression
+Line# 58: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statement : IF LPAREN expression RPAREN statement ELSE statement
+statements : statements statement
+Warning at line no 59 : indentation error
+Line# 59: Token <PRINTLN> Lexeme println found
+Line# 59: Token <LPAREN> Lexeme ( found
+Line# 59: Token <ID> Lexeme k found
+Line# 59: Token <RPAREN> Lexeme ) found
+Line# 59: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 60 : indentation error
+Line# 60: Token <ID> Lexeme k found
+Line# 60: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 60: Token <CONST_INT> Lexeme 121 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 60: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 61 : indentation error
+Line# 61: Token <ID> Lexeme k found
+Line# 61: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 61: Token <ADDOP> Lexeme - found
+Line# 61: Token <ID> Lexeme k found
+Line# 61: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+unary_expression : ADDOP unary_expression
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 62 : indentation error
+Line# 62: Token <ID> Lexeme i found
+Line# 62: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 62: Token <CONST_INT> Lexeme 5 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 62: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 63 : indentation error
+Line# 63: Token <ID> Lexeme k found
+Line# 63: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 63: Token <ID> Lexeme i found
+Line# 63: Token <ADDOP> Lexeme + found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+Line# 63: Token <ID> Lexeme k found
+Line# 63: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 64 : indentation error
+Line# 64: Token <PRINTLN> Lexeme println found
+Line# 64: Token <LPAREN> Lexeme ( found
+Line# 64: Token <ID> Lexeme k found
+Line# 64: Token <RPAREN> Lexeme ) found
+Line# 64: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 65 : indentation error
+Line# 65: Token <ID> Lexeme k found
+Line# 65: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 65: Token <ADDOP> Lexeme - found
+Line# 65: Token <CONST_INT> Lexeme 4 found
+factor : CONST_INT
+unary_expression : factor
+unary_expression : ADDOP unary_expression
+term : unary_expression
+Line# 65: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 66 : indentation error
+Line# 66: Token <ID> Lexeme k found
+Line# 66: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 66: Token <ID> Lexeme k found
+Line# 66: Token <MULOP> Lexeme * found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+Line# 66: Token <CONST_INT> Lexeme 4 found
+factor : CONST_INT
+unary_expression : factor
+term : term MULOP unary_expression
+Line# 66: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 67 : indentation error
+Line# 67: Token <PRINTLN> Lexeme println found
+Line# 67: Token <LPAREN> Lexeme ( found
+Line# 67: Token <ID> Lexeme k found
+Line# 67: Token <RPAREN> Lexeme ) found
+Line# 67: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 68 : indentation error
+Line# 68: Token <ID> Lexeme j found
+Line# 68: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 68: Token <CONST_INT> Lexeme 19 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 68: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 69 : indentation error
+Line# 69: Token <ID> Lexeme i found
+Line# 69: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 69: Token <CONST_INT> Lexeme 4 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 69: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 70 : indentation error
+Line# 70: Token <ID> Lexeme k found
+Line# 70: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 70: Token <ID> Lexeme j found
+Line# 70: Token <MULOP> Lexeme / found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+Line# 70: Token <ID> Lexeme i found
+Line# 70: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+term : term MULOP unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 71 : indentation error
+Line# 71: Token <PRINTLN> Lexeme println found
+Line# 71: Token <LPAREN> Lexeme ( found
+Line# 71: Token <ID> Lexeme k found
+Line# 71: Token <RPAREN> Lexeme ) found
+Line# 71: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 72 : indentation error
+Line# 72: Token <ID> Lexeme k found
+Line# 72: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 72: Token <ID> Lexeme j found
+Line# 72: Token <MULOP> Lexeme % found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+Line# 72: Token <ID> Lexeme i found
+Line# 72: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+term : term MULOP unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 73 : indentation error
+Line# 73: Token <PRINTLN> Lexeme println found
+Line# 73: Token <LPAREN> Lexeme ( found
+Line# 73: Token <ID> Lexeme k found
+Line# 73: Token <RPAREN> Lexeme ) found
+Line# 73: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 74 : indentation error
+Line# 74: Token <ID> Lexeme k found
+Line# 74: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 74: Token <ID> Lexeme f found
+Line# 74: Token <LPAREN> Lexeme ( found
+Line# 74: Token <CONST_INT> Lexeme 111 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 74: Token <COMMA> Lexeme , found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+arguments : logic_expression
+Line# 74: Token <CONST_INT> Lexeme 222 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 74: Token <COMMA> Lexeme , found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+arguments : arguments COMMA logic_expression
+Line# 74: Token <CONST_INT> Lexeme 333 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 74: Token <RPAREN> Lexeme ) found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+arguments : arguments COMMA logic_expression
+argument_list : arguments
+factor : ID LPAREN argument_list RPAREN
+unary_expression : factor
+term : unary_expression
+Line# 74: Token <ADDOP> Lexeme - found
+simple_expression : term
+Line# 74: Token <CONST_INT> Lexeme 444 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 74: Token <SEMICOLON> Lexeme ; found
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 75 : indentation error
+Line# 75: Token <PRINTLN> Lexeme println found
+Line# 75: Token <LPAREN> Lexeme ( found
+Line# 75: Token <ID> Lexeme k found
+Line# 75: Token <RPAREN> Lexeme ) found
+Line# 75: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 76 : indentation error
+Line# 76: Token <ID> Lexeme k found
+Line# 76: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 76: Token <ID> Lexeme recursive found
+Line# 76: Token <LPAREN> Lexeme ( found
+Line# 76: Token <CONST_INT> Lexeme 5 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 76: Token <RPAREN> Lexeme ) found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+arguments : logic_expression
+argument_list : arguments
+factor : ID LPAREN argument_list RPAREN
+unary_expression : factor
+term : unary_expression
+Line# 76: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 77 : indentation error
+Line# 77: Token <PRINTLN> Lexeme println found
+Line# 77: Token <LPAREN> Lexeme ( found
+Line# 77: Token <ID> Lexeme k found
+Line# 77: Token <RPAREN> Lexeme ) found
+Line# 77: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 78 : indentation error
+Line# 78: Token <ID> Lexeme k found
+Line# 78: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 78: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 78: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 79 : indentation error
+Line# 79: Token <ID> Lexeme i found
+Line# 79: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 79: Token <CONST_INT> Lexeme 1 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 79: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 80 : indentation error
+Line# 80: Token <ID> Lexeme j found
+Line# 80: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 80: Token <ID> Lexeme i found
+Line# 80: Token <LOGICOP> Lexeme || found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+Line# 80: Token <ID> Lexeme k found
+Line# 80: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression LOGICOP rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 81 : indentation error
+Line# 81: Token <PRINTLN> Lexeme println found
+Line# 81: Token <LPAREN> Lexeme ( found
+Line# 81: Token <ID> Lexeme j found
+Line# 81: Token <RPAREN> Lexeme ) found
+Line# 81: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 82 : indentation error
+Line# 82: Token <ID> Lexeme j found
+Line# 82: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 82: Token <ID> Lexeme i found
+Line# 82: Token <LOGICOP> Lexeme && found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+Line# 82: Token <ID> Lexeme k found
+Line# 82: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression LOGICOP rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 83 : indentation error
+Line# 83: Token <PRINTLN> Lexeme println found
+Line# 83: Token <LPAREN> Lexeme ( found
+Line# 83: Token <ID> Lexeme j found
+Line# 83: Token <RPAREN> Lexeme ) found
+Line# 83: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 84 : indentation error
+Line# 84: Token <ID> Lexeme k found
+Line# 84: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 84: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 84: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 85 : indentation error
+Line# 85: Token <ID> Lexeme i found
+Line# 85: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 85: Token <CONST_INT> Lexeme 0 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 85: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 86 : indentation error
+Line# 86: Token <ID> Lexeme j found
+Line# 86: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 86: Token <ID> Lexeme i found
+Line# 86: Token <LOGICOP> Lexeme || found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+Line# 86: Token <ID> Lexeme k found
+Line# 86: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression LOGICOP rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 87 : indentation error
+Line# 87: Token <PRINTLN> Lexeme println found
+Line# 87: Token <LPAREN> Lexeme ( found
+Line# 87: Token <ID> Lexeme j found
+Line# 87: Token <RPAREN> Lexeme ) found
+Line# 87: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 88 : indentation error
+Line# 88: Token <ID> Lexeme j found
+Line# 88: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 88: Token <ID> Lexeme i found
+Line# 88: Token <LOGICOP> Lexeme && found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+Line# 88: Token <ID> Lexeme k found
+Line# 88: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression LOGICOP rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 89 : indentation error
+Line# 89: Token <PRINTLN> Lexeme println found
+Line# 89: Token <LPAREN> Lexeme ( found
+Line# 89: Token <ID> Lexeme j found
+Line# 89: Token <RPAREN> Lexeme ) found
+Line# 89: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 90 : indentation error
+Line# 90: Token <ID> Lexeme j found
+Line# 90: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 90: Token <NOT> Lexeme ! found
+Line# 90: Token <ID> Lexeme k found
+Line# 90: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+unary_expression : NOT unary_expression
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 91 : indentation error
+Line# 91: Token <PRINTLN> Lexeme println found
+Line# 91: Token <LPAREN> Lexeme ( found
+Line# 91: Token <ID> Lexeme j found
+Line# 91: Token <RPAREN> Lexeme ) found
+Line# 91: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 92 : indentation error
+Line# 92: Token <ID> Lexeme j found
+Line# 92: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 92: Token <NOT> Lexeme ! found
+Line# 92: Token <ID> Lexeme j found
+Line# 92: Token <SEMICOLON> Lexeme ; found
+variable : ID
+factor : variable
+unary_expression : factor
+unary_expression : NOT unary_expression
+term : unary_expression
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 93 : indentation error
+Line# 93: Token <PRINTLN> Lexeme println found
+Line# 93: Token <LPAREN> Lexeme ( found
+Line# 93: Token <ID> Lexeme j found
+Line# 93: Token <RPAREN> Lexeme ) found
+Line# 93: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 94 : indentation error
+Line# 94: Token <ID> Lexeme j found
+Line# 94: Token <ASSIGNOP> Lexeme = found
+variable : ID
+Line# 94: Token <CONST_INT> Lexeme 12 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <ADDOP> Lexeme + found
+simple_expression : term
+Line# 94: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <MULOP> Lexeme / found
+Line# 94: Token <CONST_INT> Lexeme 89 found
+factor : CONST_INT
+unary_expression : factor
+term : term MULOP unary_expression
+Line# 94: Token <MULOP> Lexeme % found
+Line# 94: Token <LPAREN> Lexeme ( found
+Line# 94: Token <CONST_INT> Lexeme 3 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <ADDOP> Lexeme - found
+simple_expression : term
+Line# 94: Token <CONST_INT> Lexeme 33 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <ADDOP> Lexeme + found
+simple_expression : simple_expression ADDOP term
+Line# 94: Token <CONST_INT> Lexeme 64 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <MULOP> Lexeme * found
+Line# 94: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+term : term MULOP unary_expression
+Line# 94: Token <RPAREN> Lexeme ) found
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+factor : LPAREN expression RPAREN
+unary_expression : factor
+term : term MULOP unary_expression
+Line# 94: Token <ADDOP> Lexeme - found
+simple_expression : simple_expression ADDOP term
+Line# 94: Token <CONST_INT> Lexeme 3 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <ADDOP> Lexeme + found
+simple_expression : simple_expression ADDOP term
+Line# 94: Token <LPAREN> Lexeme ( found
+Line# 94: Token <CONST_INT> Lexeme 3 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <ADDOP> Lexeme + found
+simple_expression : term
+Line# 94: Token <CONST_INT> Lexeme 59 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <MULOP> Lexeme / found
+Line# 94: Token <CONST_INT> Lexeme 9 found
+factor : CONST_INT
+unary_expression : factor
+term : term MULOP unary_expression
+Line# 94: Token <MULOP> Lexeme * found
+Line# 94: Token <CONST_INT> Lexeme 2 found
+factor : CONST_INT
+unary_expression : factor
+term : term MULOP unary_expression
+Line# 94: Token <ADDOP> Lexeme - found
+simple_expression : simple_expression ADDOP term
+Line# 94: Token <CONST_INT> Lexeme 4 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <RPAREN> Lexeme ) found
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+factor : LPAREN expression RPAREN
+unary_expression : factor
+term : unary_expression
+Line# 94: Token <SEMICOLON> Lexeme ; found
+simple_expression : simple_expression ADDOP term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : variable ASSIGNOP logic_expression
+expression_statement : expression SEMICOLON
+statement : expression_statement
+statements : statements statement
+Warning at line no 95 : indentation error
+Line# 95: Token <PRINTLN> Lexeme println found
+Line# 95: Token <LPAREN> Lexeme ( found
+Line# 95: Token <ID> Lexeme j found
+Line# 95: Token <RPAREN> Lexeme ) found
+Line# 95: Token <SEMICOLON> Lexeme ; found
+statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+statements : statements statement
+Warning at line no 97 : indentation error
+Line# 97: Token <RETURN> Lexeme return found
+Line# 97: Token <CONST_INT> Lexeme 0 found
+factor : CONST_INT
+unary_expression : factor
+term : unary_expression
+Line# 97: Token <SEMICOLON> Lexeme ; found
+simple_expression : term
+rel_expression : simple_expression
+logic_expression : rel_expression
+expression : logic_expression
+statement : RETURN expression SEMICOLON
+statements : statements statement
+Line# 98: Token <RCURL> Lexeme } found
+compound_statement : LCURL statements RCURL
+	ScopeTable# 5
+	7--> <i,INT> 
+	8--> <j,INT> 
+	9--> <k,INT> 
+	10--> <a,INT> <array,ARRAY,INT> 
+	ScopeTable# 1
+	1--> <arr,ARRAY,INT> <recursive,FUNCTION,INT> 
+	2--> <main,FUNCTION,INT> 
+	4--> <f,FUNCTION,INT> 
+	9--> <v,FUNCTION,VOID> 
+	10--> <a,INT> 
+func_definition : type_specifier ID LPAREN RPAREN compound_statement
+unit : func_definition
+program : program unit
 start : program
-Total lines: 22
+Total lines: 98
 Total errors: 0
