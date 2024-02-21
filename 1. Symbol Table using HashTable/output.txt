@@ -1,0 +1,2 @@
+	ScopeTable# 1 created
+	ScopeTable# 1 deleted
