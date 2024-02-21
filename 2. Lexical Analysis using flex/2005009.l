@@ -119,15 +119,15 @@ UNFINISHED_CHAR '({CHAR_CONST}|\\)*
 %%
 
 int main(int argc, char *argv[]){
-	if(argc != 2){
-		cout << "Please provide input file name and try again" << endl;
-		return 0;
+	if(argc < 2){
+		cout << "Please specify the input file" << endl;
+		exit(1);
 	}
 	
 	FILE *fin = fopen(argv[1],"r");
 	if(fin == NULL){
 		cout << "Cannot open specified file" << endl;
-		return 0;
+		exit(1);
 	}
 
 	tout.open("2005009_token.txt");

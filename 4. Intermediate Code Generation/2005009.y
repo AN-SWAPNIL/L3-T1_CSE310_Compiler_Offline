@@ -672,6 +672,11 @@ array : ASSIGNOP LCURL argument_list RCURL
 int main(int argc,char *argv[]){
 	FILE *fp;
 
+	if(argc < 2){
+		printf("Usage: ./a.out filename\n");
+		exit(1);
+	}
+
 	if((fp=fopen(argv[1],"r"))==NULL){
 		printf("Cannot Open Input File.\n");
 		exit(1);

@@ -2,8 +2,22 @@
 using namespace std;
 
 
-int main() {
-    freopen("input.txt", "r", stdin);
+int main(int argc,char *argv[]){
+	FILE *fp;
+
+    if(argc<2){
+        printf("Please provide input file.\n");
+        exit(1);
+    }
+
+	if((fp=fopen(argv[1],"r"))==NULL){
+		printf("Cannot Open Input File.\n");
+		exit(1);
+	}
+    
+    fclose(fp);
+
+    freopen("argv[1]", "r", stdin);
     freopen("output.txt", "w", stdout);
 
     int size, counter = 0;

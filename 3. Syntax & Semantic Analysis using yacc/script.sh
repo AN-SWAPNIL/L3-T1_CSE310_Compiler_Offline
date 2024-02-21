@@ -6,6 +6,6 @@ flex 2005009.l
 echo 'Generated the scanner C file'
 g++ -w -c -o l.o lex.yy.c
 echo 'Generated the scanner object file'
-g++ y.o l.o -lfl
+g++ y.o l.o -lfl -o 2005009.out
 echo 'Ready for execution'
-./a.out input.c
+./2005009.out input.c # Change this line to execute the program
