@@ -20,6 +20,8 @@ This repositoy contains implementation of assignments from Compiler Sessional co
   
    - [x] [Problem Statement](/4.%20Intermediate%20Code%20Generation/spec.pdf)
    - [x] [Solution](/4.%20Intermediate%20Code%20Generation)
+  
+### The last assignment is the completion of the previous ones, which will generate assembly code for a C file.
 
 ## How to run on Linux
 - Install `flex` and `bison` using 
