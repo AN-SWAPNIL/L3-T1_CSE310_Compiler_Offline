@@ -13,8 +13,8 @@ This repositoy contains implementation of assignments from Compiler Sessional co
 
  - ## **`Offline 3` : Syntax & Semantic Analysis (YACC/BISON)**
   
-   - [x] [Problem Statement](/3.%20Syntax%20&%20Semantic%20Analysis%20using%20bison/spec.pdf)
-   - [x] [Solution](/3.%20Syntax%20&%20Semantic%20Analysis%20using%20bison)
+   - [x] [Problem Statement](/3.%20Syntax%20&%20Semantic%20Analysis%20using%20yacc/spec.pdf)
+   - [x] [Solution](/3.%20Syntax%20&%20Semantic%20Analysis%20using%20yacc)
 
  - ## **`Offline 4` : Intermediate Code Generation**
   
@@ -28,7 +28,8 @@ This repositoy contains implementation of assignments from Compiler Sessional co
 > sudo apt install gcc
 - Clone the repo using git clone or download the zip file.
 - Go to the directory of the assignment you want to run.
+- Put the file you want to run
+- Edit the file name in ``script.sh`` file
 - Run the following commad
-> ./script.sh <file_name>
-- <file_name> is the name of your input file
+> ./script.sh
 - input file must be in the same directory of the assignment
